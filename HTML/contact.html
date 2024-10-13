@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Mariana</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Education</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="#" class="active">Contact</a>
+        </nav>
+    </header>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch!</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="8ea94856-044e-4d25-9761-5457f9ec996f">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your message..." class="contact-inputs" required></textarea>
+            <button type="submit">Send <img src="../arrow_icon.png" alt="send button"></button>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        </form>
+        <div class="contact-right">
+            <img src="../send-email.png" alt="send email image">
+        </div>
+    </div>
+</body>
+</html>
