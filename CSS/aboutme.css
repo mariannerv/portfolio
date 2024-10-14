@@ -220,3 +220,18 @@ span {
     display: flex;
     gap: 2rem; 
 }
+
+.interests {
+    padding-left: 0;
+    margin-bottom: 3rem;
+}
+
+.interests li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.interests li span {
+    font-weight: 700;
+    color: #66e7f0;
+}
