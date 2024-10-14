@@ -20,6 +20,17 @@ body {
     overflow-x: hidden;
     background-color: black;
     color: white;
+    animation: grow 0.5s;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 header {
