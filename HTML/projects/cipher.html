@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/mySNS.css">
+    <title>Lisboa + Perto</title>
+</head>
+
+<body>
+    <a href="../projects.html">
+        <button class="back">
+            <img src="../../left.png" alt="Go back"> Go back
+        </button>
+    </a>
+
+    <section class="projeto">
+        <div class="projeto-content">
+            <h3>Development date</h3>
+            <p>May 2024 - Present</p>
+            <br>
+            <h3>About the project</h3>
+            <p>
+                This one isn't exactly a full project, it's just a collection of classical ciphers I developed for one of my classes.
+            </p>
+            <br>
+            <h3>Ciphers I coded</h3>
+            <p>
+            <ul>
+                <li><span>Caesar Cipher (Shift Cipher)</span>: TThis is one of the simplest and most well-known ciphers. In the Caesar cipher, each letter in the plaintext is shifted
+                by a fixed number of positions in the alphabet. For example, with a shift of 5, "A" becomes "F", "B" becomes "G", and so
+                on. Decrypting the message involves reversing the shift by the same amount. It's a substitution cipher where each letter
+                is replaced by another letter a set distance away in the alphabet.</li>
+                <li><span>Vigenère Cipher</span>: This cipher is a polyalphabetic substitution cipher that uses a keyword to control the encryption. Each letter of the
+                plaintext is shifted based on the corresponding letter in the repeating keyword. For example, if the keyword is "KEY",
+                the first letter of the message is shifted according to "K", the second by "E", and the third by "Y", repeating as
+                needed.</li>
+                <li><span>Vigenère Cipher with Tabula Recta</span> A variation of the Vigenère cipher that uses a tabula recta, which is essentially a matrix of shifted alphabets. Each
+                row in the table represents a Caesar cipher with a different shift. Encoding is done by selecting rows based on the
+                keyword and columns based on the plaintext. </li>
+                <li><span>Polybius Square Cipher</span> Tis a grid-based cipher that uses a 5x5 matrix of letters (combining "I" and "J" to fit). Each letter in the plaintext is
+                replaced by its coordinates (row and column) in the grid. For example, "A" might become "11", "B" could be "12", and so
+                on.</li>
+            </ul>
+            <br>
+            </p>
+            <h3>Technologies + Tools</h3>
+            <div class="tools-container">
+                <ul>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <br><br>
+            <h3>Repository</h3>
+            <p>You can find the source code <a
+                    href="https://github.com/mariannerv/Cipher">here</a>.</p>
+        </div>
+    </section>
+</body>
+
+</html>

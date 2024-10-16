@@ -157,11 +157,12 @@ span {
     color: #a08fff;
 }
 
-.projeto ul{
+.projeto ul {
     padding-left: 20px;
 }
+
 .projeto li {
-    
+
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
@@ -171,7 +172,7 @@ span {
     color: #66e7f0;
 }
 
-.projeto-content h3{
+.projeto-content h3 {
     color: #a08fff;
 }
 
@@ -191,13 +192,14 @@ button {
     margin-top: 40px;
 }
 
-a{
+a {
     color: #00d5e4;
 }
 
 button img {
     height: 15px;
 }
+
 
 .tools-container {
     display: flex;
@@ -212,12 +214,12 @@ button img {
 }
 
 .tools-right {
-    padding-top: 40px;
     width: 35%;
+    margin-right: 10px;
 }
 
 .tools-right img {
-    padding-top: 40px;
     max-width: 50%;
     height: auto;
 }
+

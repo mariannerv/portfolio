@@ -157,13 +157,14 @@ span {
     color: #a08fff;
 }
 
-.projeto ul{
+.projeto ul {
     padding-left: 20px;
 }
+
 .projeto li {
-    
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
+    margin-top: 50px;
 }
 
 .projeto li span {
@@ -171,7 +172,7 @@ span {
     color: #66e7f0;
 }
 
-.projeto-content h3{
+.projeto-content h3 {
     color: #a08fff;
 }
 
@@ -191,7 +192,7 @@ button {
     margin-top: 40px;
 }
 
-a{
+a {
     color: #00d5e4;
 }
 
@@ -203,7 +204,6 @@ button img {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
 .tools-container ul {
@@ -217,7 +217,6 @@ button img {
 }
 
 .tools-right img {
-    padding-top: 40px;
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
 }

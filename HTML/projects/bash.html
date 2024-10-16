@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/mySNS.css">
+    <title>Lisboa + Perto</title>
+</head>
+
+<body>
+    <a href="../projects.html">
+        <button class="back">
+            <img src="../../left.png" alt="Go back"> Go back
+        </button>
+    </a>
+
+    <section class="projeto">
+        <div class="projeto-content">
+            <h3>Development date</h3>
+            <p>May 2024 - Present</p>
+            <br>
+            <h3>About the project</h3>
+            <p>
+                This one isn't exactly a project, it's more of a <span>colletion of scripts</span> that I've developed for other projects over time.
+                My plan is to keep adding scripts to the repository.
+            </p>
+            <br>
+            <h3>Scripts in the colletion</h3>
+            <p>
+            <ul>
+                <li><span>Firewall rules to block known country IPs</span>: This script generates IPSets from a database of IP
+                    addresses, allowing the creation of firewall rules to block traffic
+                    from countries identified as high-risk for cyberattacks, based on data from Project Honey Pot and MaxMind's GeoLite2
+                    database.</li>
+                <li><span>Elasticity Script for Google Cloud VMs</span>: This script dynamically manages Google Cloud Compute Engine VM instances based on the average CPU usage of currently
+                running instances whose names start with "servidor". When CPU usage exceeds certain thresholds, additional VMs are started. Conversely, when CPU usage drops below defined
+                levels, instances are stopped to conserve resources.</li>
+                <li><span>CPU Usage Monitoring for Google Cloud VM Instances</span> This Bash script monitors CPU usage across all running Google Cloud VM instances whose names contain the word
+                servidor. It retrieves the CPU usage, calculates the average CPU usage across all matching instances, and logs the results.</li>
+                <li><span>PostgreSQL Automatic Backup</span> This script provides a Dockerized solution for automating PostgreSQL database backups. The backup script runs inside a
+                Docker container and creates compressed, encrypted backups, which are stored locally. The solution also manages backup
+                retention, deleting old backups based on the specified number of days.</li>
+            </ul>
+            <br>
+            </p>
+            <h3>Technologies + Tools</h3>
+            <div class="tools-container">
+                <ul>
+                    <li>Bash</li>
+                    <li>Docker</li>
+                    <li>Google Cloud Platform (GCP)</li>
+                    <li>Linux</li>
+                </ul>
+                <div class="tools-right">
+                    <img src="../../tools.png" alt="developer tools">
+                </div>
+            </div>
+            <br><br>
+            <h3>Repository</h3>
+            <p>You can find all this scripts as well as their documention and how to use them <a href="https://github.com/mariannerv/bash-scripts">here</a>.</p>
+        </div>
+    </section>
+</body>
+
+</html>
