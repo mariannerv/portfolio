@@ -75,36 +75,76 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-@media(max-width:995px) {
-    nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #00d5e4;
-        border-bottom: 3px solid #00d5e4;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #00d5e4;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
 
-    nav.active {
-        display: block;
+
+@media(max-width: 995px) {
+    nav {
+        flex-direction: column;
+        /* Stack links vertically */
+        padding: 1rem;
+        /* Add some padding */
+        width: 100%;
+        /* Full width */
+        background-color: #00d5e4;
+        /* Background color */
+        position: absolute;
+        /* Position it absolutely */
+        top: 100%;
+        /* Place it below the header */
+        left: 0;
+        /* Align to the left */
+        z-index: 99;
+        /* Ensure it appears above other elements */
     }
 
     nav a {
         display: block;
+        /* Make links block elements */
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1rem 0;
+        /* Margin between links */
+        text-align: center;
+        /* Center align text */
+    }
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 5%;
     }
 
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        background-color: black;
+        /* Make menu more visible on mobile */
+    }
+}
     nav a:hover,
     nav a.active {
         padding: 1rem;
+        /* Add padding on hover/active */
         border-radius: 0.5rem;
+        /* Rounded corners */
         border-bottom: 0.5rem solid #00d5e4;
+        /* Border style */
+    }
+
+    section {
+        margin-top: calc(100px + 10rem);
+        /* Adjust this value based on your navbar height */
     }
 }
 
@@ -221,4 +261,76 @@ button img {
     padding-top: 60px;
     max-width: 50%;
     height: auto;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        width: 100%;
+        border-left: none;
+        border-bottom-left-radius: 0;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 1.6rem;
+        padding: 0.5rem 0;
+    }
+
+    .projeto {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .projeto .projeto-content h1 {
+        font-size: 4rem;
+    }
+
+    .projeto-content h3 {
+        font-size: 3rem;
+    }
+
+    .projeto-content p {
+        font-size: 1.6rem;
+    }
+
+    .tools-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tools-container ul {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tools-right {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .tools-right img {
+        max-width: 70%;
+        margin: 0 auto;
+
+    }
+
+    button {
+        margin-left: 0;
+        font-size: 1.4rem;
+        padding: 10px 20px;
+    }
 }

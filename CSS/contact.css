@@ -30,9 +30,11 @@ body {
         transform: scale(1);
     }
 }
+
 header {
     margin-top: 20px;
     position: fixed;
+    /* Keep header fixed at the top */
     top: 0;
     left: 0;
     width: 100%;
@@ -72,74 +74,69 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-@media(max-width:995px) {
+/* Media queries for responsiveness */
+@media (max-width: 995px) {
     nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #00d5e4;
-        border-bottom: 3px solid #00d5e4;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #00d5e4;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
+        display: flex;
+        /* Show nav in row */
+        position: static;
+        /* Keep nav in flow */
+        background-color: transparent;
+        /* No background for smaller screens */
+        padding: 1rem 0;
+        /* Padding adjustment */
     }
 
     nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        margin-left: 2rem;
+        /* Reduced margin for smaller screens */
+        font-size: 1.5rem;
+        /* Smaller font size */
     }
 
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #00d5e4;
-    }
+    
 }
 
-
-.contact-container{
+.contact-container {
     height: 100vh;
+    /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-left: 9%;
+    /* Initial left margin */
+    margin-top: 80px;
+    /* Space to avoid overlap with header */
 }
 
-.contact-left{
+.contact-left {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
     max-width: 600px;
+    /* Max width for contact-left */
     width: 100%;
+    /* Full width */
 }
 
-.contact-left-title h2{
+.contact-left-title h2 {
     font-weight: 600;
     color: #00d5e4;
     font-size: 40px;
-    margin-bottom: 5px;
+    /* Large title size for desktop */
 }
 
-
-.contact-left-title hr{
+.contact-left-title hr {
     border: none;
     width: 120px;
     height: 5px;
     background-color: #00d5e4;
 }
 
-.contact-inputs{
+.contact-inputs {
     width: 400px;
+    /* Input width */
     height: 50px;
     border: none;
     outline: none;
@@ -149,22 +146,24 @@ nav a.active {
     border-radius: 50px;
 }
 
-.contact-left textarea{
+.contact-left textarea {
     height: 140px;
+    /* Textarea height */
     padding-top: 15px;
     border-radius: 20px;
 }
 
-.contact-inputs:focus{
+.contact-inputs:focus {
     border: 2px solid #00d5e4;
+    /* Focus border */
 }
 
-.contact-inputs ::placeholder{
+.contact-inputs::placeholder {
     color: #00d5e4;
+    /* Placeholder color */
 }
 
-
-.contact-left button{
+.contact-left button {
     display: flex;
     align-items: center;
     padding: 15px 30px;
@@ -177,20 +176,110 @@ nav a.active {
     cursor: pointer;
 }
 
-.contact-left button img{
+.contact-left button img {
     height: 15px;
+    /* Button icon size */
 }
 
-.contact-right img{
+.contact-right img {
     width: 1000px;
+    /* Set a fixed width */
 }
 
-@media (max-width:800px) {
-    .contact-inputs{
-        width: 80vw;
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        margin-left: 0;
+        /* Remove margin for smaller screens */
     }
 
-    .contact-right{
+    .contact-left {
+        align-items: center;
+        /* Center align contact-left */
+        max-width: 100%;
+        /* Allow full width */
+        margin-top: 20px;
+        /* Margin adjustment */
+    }
+
+    .contact-left-title h2 {
+        font-size: 30px;
+        /* Adjust title size */
+        text-align: center;
+        /* Center title */
+    }
+
+    .contact-inputs,
+    .contact-left textarea {
+        width: 80%;
+        /* Adjust input and textarea width */
+        max-width: 400px;
+        /* Limit max width for better layout */
+    }
+
+    .contact-right img {
         display: none;
+        /* Hide image on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        background-color: black;
+        /* Make menu more visible on mobile */
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-left-title h2 {
+        font-size: 24px;
+    }
+
+    .contact-left button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .contact-inputs,
+    .contact-left textarea {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contact-right img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+
+    .contact-container {
+        padding: 0 2%;
+    }
+
+    .contact-left-title h2 {
+        font-size: 20px;
+    }
+
+    .contact-left {
+        gap: 10px;
     }
 }

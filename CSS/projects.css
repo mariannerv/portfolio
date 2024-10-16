@@ -75,39 +75,50 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-@media(max-width:995px) {
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 995px) {
+
+    .hamburger {
+        display: block;
+    }
+
     nav {
-        position: absolute;
         display: none;
-        top: 0;
+        position: absolute;
+        top: 80px;
         right: 0;
-        width: 40%;
-        border-left: 3px solid #00d5e4;
-        border-bottom: 3px solid #00d5e4;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        width: 100%;
         background-color: #00d5e4;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
     }
 
     nav.active {
-        display: block;
+        display: flex;
     }
+
 
     nav a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1rem 0;
+        color: white;
     }
 
     nav a:hover,
     nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #00d5e4;
+        color: black;
+        border-bottom: none;
     }
 }
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -162,3 +173,82 @@ b{
     border-bottom: 3px solid ;
 }
 
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .grid-item {
+        padding: 15px;
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 995px) {
+    nav {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 2.8rem;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    .grid-item {
+        padding: 18px;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}

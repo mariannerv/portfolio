@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -74,39 +75,97 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-@media(max-width:995px) {
+/* General responsiveness for nav, sections */
+@media (max-width: 995px) {
     nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #00d5e4;
-        border-bottom: 3px solid #00d5e4;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #00d5e4;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
+        display: flex;
+        /* Show nav in row */
+        position: static;
+        /* Keep nav in flow */
+        background-color: transparent;
+        /* No background for smaller screens */
+        padding: 1rem 0;
+        /* Padding adjustment */
     }
 
     nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        margin-left: 2rem;
+        /* Reduced margin for smaller screens */
+        font-size: 1.5rem;
+        /* Smaller font size */
     }
 
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #00d5e4;
+
+}
+
+/* Media Queries for 600px and below */
+@media (max-width: 600px) {
+    .education .education-content h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .education-content h3,
+    .education-content p {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .timeline {
+        width: 85%;
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+
+    .timeline li {
+        width: 15px;
+        height: 15px;
+    }
+
+    .timeline li:before {
+        font-size: 20px;
+        top: -50px;
+    }
+
+    .timeline li:after {
+        font-size: 14px;
+        top: 25px;
     }
 }
 
+/* Media Queries for 400px and below */
+@media (max-width: 400px) {
+    .education .education-content h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .education-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .education-content p {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        width: 90%;
+    }
+
+    .timeline li {
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline li:before {
+        font-size: 16px;
+        top: -45px;
+    }
+
+    .timeline li:after {
+        font-size: 12px;
+    }
+}
 section {
     min-height: 80vh;
     padding: 5rem 9% 5rem;
@@ -118,6 +177,8 @@ section {
     align-items: center;
     gap: 8rem;
     background-color: black;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
 }
 
 .education .education-content h1 {
@@ -136,7 +197,8 @@ section {
     font-size: 2.5rem;
 }
 
-span,a {
+span,
+a {
     color: #00d5e4;
 }
 
@@ -148,11 +210,12 @@ span,a {
 }
 
 .timeline {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 20px;
     list-style: none;
     text-align: justify;
-    margin: 80px auto;
+    margin: 40px auto;
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(45%, rgba(255, 255, 255, 0)), color-stop(51%, #00d5e4), color-stop(57%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 45%, #00d5e4 51%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
 }
@@ -167,7 +230,7 @@ span,a {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: #a08fff;;
+    background: #a08fff;
     text-align: center;
     line-height: 1.2;
     position: relative;
@@ -204,4 +267,39 @@ span,a {
 
 .timeline li:after {
     top: 30px;
+}
+
+@media (max-width: 600px) {
+    .education {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .education .education-content h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .education-content h3,
+    .education-content p {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .timeline {
+        width: 85%;
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+
+    .timeline li {
+        width: 15px;
+        height: 15px;
+    }
+
+    .timeline li:before {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 }
