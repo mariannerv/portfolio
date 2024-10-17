@@ -178,7 +178,7 @@ section {
     gap: 8rem;
     background-color: black;
     flex-wrap: wrap;
-    /* Allow wrapping on small screens */
+
 }
 
 .education .education-content h1 {
