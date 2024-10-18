@@ -75,7 +75,48 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-/* Responsive Header */
+@media (max-width: 995px) {
+    .icon {
+        display: block;
+        font-size: 30px;
+        color: white;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: #00d5e4;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: black;
+        border-bottom: none;
+    }
+}
+@media (min-width: 995px) {
+    header .fas.fa-bars {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 1rem 5%;
@@ -105,6 +146,8 @@ nav a.active {
     .logo {
         font-size: 2.5rem;
     }
+
+    
 }
 
 section {

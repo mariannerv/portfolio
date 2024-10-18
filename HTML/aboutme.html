@@ -13,13 +13,13 @@
 <body>
     <header>
         <a href="../index.html" class="logo">Mariana</a>
-        <div class="hamburger" onclick="toggleNav()">☰</div>
+        <i class="fas fa-bars icon" onclick="toggleMenu()"></i> 
         <nav>
             <a href="../index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="education.html">Education</a>
             <a href="aboutme.html" class="active">About Me</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" >Contact</a>
         </nav>
     </header>
 
@@ -70,6 +70,11 @@
             </ul>
         </div>
     </section>
-
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+    </script>
+</body>
 
 </html>

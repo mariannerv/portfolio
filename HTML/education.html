@@ -14,18 +14,14 @@
 <body>
     <header>
         <a href="../index.html" class="logo">Mariana</a>
-        <div class="topnav" id="myTopnav">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html" class="active">Education</a>
-                <a href="aboutme.html">About Me</a>
-                <a href="contact.html">Contact</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </nav>
-        </div>
+        <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
 
@@ -62,6 +58,10 @@
 
         </div>
     </section>
-
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
