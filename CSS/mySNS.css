@@ -220,3 +220,114 @@ button img {
     max-width: 70%;
     height: auto;
 }
+
+/* --- Responsive Styles for Smaller Screens --- */
+@media (max-width: 768px) {
+    header i.fa-bars {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #00d5e4;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 1.5rem 0;
+        color: black;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the entire section for better mobile experience */
+    section {
+        padding: 2rem 5%;
+    }
+
+    .projeto {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .projeto .projeto-content h1 {
+        font-size: 4rem;
+    }
+
+    .projeto-content h3 {
+        font-size: 3rem;
+    }
+
+    .projeto-content p,
+    .projeto li {
+        font-size: 1.6rem;
+    }
+
+    /* Adjust tools-container to stack vertically */
+    .tools-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tools-container ul {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .tools-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tools-right img {
+        max-width: 20%;
+        /* Make the image bigger on mobile */
+    }
+
+    /* Adjust button size */
+    button {
+        font-size: 1.4rem;
+        padding: 10px 20px;
+        margin-left: 0;
+    }
+
+    hr {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .projeto .projeto-content h1 {
+        font-size: 3rem;
+    }
+
+    .projeto-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .projeto-content p,
+    .projeto li {
+        font-size: 1.4rem;
+    }
+
+    .tools-right img {
+        max-width: 40%;
+    }
+}

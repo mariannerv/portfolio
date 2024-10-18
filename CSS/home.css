@@ -75,36 +75,35 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
-@media(max-width:995px) {
+/* Responsive Header */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+
     nav {
-        position: absolute;
         display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #00d5e4;
-        border-bottom: 3px solid #00d5e4;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #00d5e4;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
 
     nav.active {
         display: block;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        background-color: #00d5e4;
+        text-align: center;
+        padding: 2rem 0;
+        z-index: 100;
     }
 
     nav a {
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
     }
 
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #00d5e4;
+    .logo {
+        font-size: 2.5rem;
     }
 }
 
@@ -157,6 +156,43 @@ span {
 .home-img img:hover {
     font-size: 1.8rem;
     font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+        margin: 2rem 0;
+    }
+
+    .home-img img {
+        width: 80%;
+        margin: 2rem 0;
+    }
+
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 1rem 2.4rem;
+    }
 }
 
 .social-icons a {
@@ -286,5 +322,17 @@ span {
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .typing-text {
+        font-size: 1.8rem;
     }
 }

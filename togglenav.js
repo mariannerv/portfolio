@@ -1,17 +1,8 @@
-function toggleNav() {
-    const nav = document.querySelector('header nav');
-    nav.classList.toggle('active');
+function myFunction() {
+    var nav = document.getElementById("myTopnav").getElementsByTagName("nav")[0];
+    if (nav.className === "") {
+        nav.className = "active"; // Show the nav links
+    } else {
+        nav.className = ""; // Hide the nav links
+    }
 }
-
-// Add an event listener to the hamburger icon to toggle the navigation
-const hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click', toggleNav);
-
-// Close the nav when a link is clicked
-const navLinks = document.querySelectorAll('header nav a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        const nav = document.querySelector('header nav');
-        nav.classList.remove('active'); // Close the nav
-    });
-});

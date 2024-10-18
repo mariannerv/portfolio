@@ -33,6 +33,7 @@ body {
     }
 }
 
+/* Header */
 header {
     margin-top: 20px;
     position: relative;
@@ -41,7 +42,6 @@ header {
     width: 100%;
     padding: 1rem 9%;
     background-color: transparent;
-    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,6 +60,7 @@ header {
     transform: scale(1.1);
 }
 
+/* Navbar links */
 nav a {
     font-size: 1.8rem;
     color: white;
@@ -75,6 +76,7 @@ nav a.active {
     border-bottom: 3px solid #00d5e4;
 }
 
+/* Hamburger icon */
 .hamburger {
     display: none;
     font-size: 3rem;
@@ -82,13 +84,23 @@ nav a.active {
     cursor: pointer;
 }
 
-
-@media (max-width: 995px) {
-
-    .hamburger {
-        display: block;
+/* Hide the icon on larger screens */
+@media (min-width: 996px) {
+    .icon {
+        display: none;
     }
+}
 
+/* Show the icon and hide links on smaller screens */
+@media (max-width: 995px) {
+    .icon {
+        display: block;
+        /* Ensure the icon is displayed */
+        font-size: 30px;
+        /* Adjust size as necessary */
+        color: white;
+        /* Set color to ensure it's visible */
+    }
     nav {
         display: none;
         position: absolute;
@@ -105,7 +117,6 @@ nav a.active {
         display: flex;
     }
 
-
     nav a {
         display: block;
         font-size: 2rem;
@@ -119,6 +130,8 @@ nav a.active {
         border-bottom: none;
     }
 }
+
+/* Grid Layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,44 +150,37 @@ nav a.active {
 .grid-item:hover {
     background-color: #047c85;
     color: black;
-
 }
 
 h3 {
     margin: 0 0 10px 0;
     font-size: 2rem;
     font-weight: 600;
-
 }
 
 p {
     margin: 0;
     color: #d5d5d5;
     font-size: 1.4rem;
-
 }
 
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-
-    }
-}
-
-b{
+b {
     color: #a08fff;
 }
 
 .grid-item a {
-    font-size: 1;
+    font-size: 1rem;
     color: white;
     font-weight: 500;
     transition: 0.3s ease;
-    border-bottom: 3px solid ;
+    border-bottom: 3px solid;
 }
 
-
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 
     html {
         font-size: 50%;
@@ -195,13 +201,6 @@ b{
         margin-left: 2rem;
     }
 
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1.5rem 1.5rem;
-    }
-
     .grid-item {
         padding: 15px;
         font-size: 1.6rem;
@@ -220,7 +219,6 @@ b{
         font-size: 1.4rem;
     }
 }
-
 
 @media (max-width: 995px) {
     nav {
