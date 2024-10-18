@@ -236,6 +236,10 @@ span {
         font-size: 1.4rem;
         padding: 1rem 2.4rem;
     }
+
+    .typing-text{
+        font-size: 10px;
+    }
 }
 
 .social-icons a {
@@ -366,16 +370,35 @@ span {
         width: 70vw;
         margin-top: 4rem;
     }
+    .typing-text {
+        font-size: 10px;
+        font-weight: 200;
+        min-width: 40px;
+    }
 }
 
 @media (max-width: 768px) {
-    .typing-text {
-        font-size: 2rem;
+    .typing-text span::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: calc(100% + 2px);
+            height: 60%;
+            border-left: 3px solid black;
+            right: -8;
+            animation: cursor 0.6s infinite;
     }
 }
 
 @media (max-width: 480px) {
-    .typing-text {
-        font-size: 1.8rem;
-    }
+    .typing-text span::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: calc(100% + 2px);
+            height: 60%;
+            border-left: 3px solid black;
+            right: -8;
+            animation: cursor 0.6s infinite;
+        }
 }
