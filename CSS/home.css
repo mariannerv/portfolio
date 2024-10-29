@@ -441,7 +441,7 @@ span {
     }
 }
 
-.language-toggle {
+#language-toggle {
     font-size: 1.4rem;
     color: white;
     background-color: transparent;
@@ -455,7 +455,7 @@ span {
     margin-left: 2rem;
 }
 
-.language-toggle:hover {
+#language-toggle:hover {
     color: black;
     background-color: #00d5e4;
     box-shadow: 0 0 15px #00d5e4;
