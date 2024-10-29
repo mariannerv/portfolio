@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+    <title>Mariana R. V.</title>
+    
 </head>
 
 <body>
@@ -20,6 +25,8 @@
             <a href="HTML/education.html">Education</a>
             <a href="HTML/aboutme.html">About Me</a>
             <a href="HTML/contact.html">Contact</a>
+            <button id="language-toggle">EN / PT</button>
+
         </nav>
     </header>
 
@@ -46,49 +53,11 @@
         function toggleMenu() {
             document.querySelector('nav').classList.toggle('active');
         }
+        
+        
+        
     </script>
-    <script>
-        // Create a function to change
-        // the hash value of the page
-        function changeLanguage(lang) {
-            location.hash = lang;
-            location.reload();
-        }
-
-        // Define the language reload anchors
-        let language = {
-            eng: {
-                welcome: "Welcome to the GeeksforGeeks " +
-                    "Portal! You can choose any language " +
-                    "using the buttons above!"
-            },
-            es: {
-                welcome: "¡Bienvenido al portal GeeksforGeeks! " +
-                    "¡Puedes elegir cualquier idioma usando " +
-                    "los botones de arriba!"
-            },
-            hin: {
-                welcome: "GeeksforGeeks पोर्टल पर आपका स्वागत है! " +
-                    "आप ऊपर दिए गए बटन का उपयोग करके किसी भी " +
-                    "भाषा को चुन सकते हैं!"
-            }
-        };
-
-        // Check if a hash value exists in the URL
-        if (window.location.hash) {
-
-            // Set the content of the webpage
-            // depending on the hash value
-            if (window.location.hash == "#es") {
-                siteContent.textContent =
-                    language.es.welcome;
-            }
-            else if (window.location.hash == "#hin") {
-                siteContent.textContent =
-                    language.hin.welcome;
-            }
-        }
-    </script>
+    
 </body>
 
 </html>
