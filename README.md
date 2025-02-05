@@ -5,3 +5,4 @@
 - New section?
 - Linkedin integration maybe
 - Updates section perhaps?
+   
