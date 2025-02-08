@@ -6,3 +6,4 @@
 - Linkedin integration maybe
 - Updates section perhaps?
    
+   
